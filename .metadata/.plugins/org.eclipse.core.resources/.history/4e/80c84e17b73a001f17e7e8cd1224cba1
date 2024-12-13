@@ -1,0 +1,17 @@
+package com.set;
+
+import java.util.HashSet;
+import java.util.Set;
+
+public class Hashset {
+	public static void main(String[] args) {
+		Set<String> set = new HashSet<>();
+		set.add("Bob");
+		set.add("Tom");
+		set.add("Zam");
+		set.add("Paul");
+		set.add("Gary");
+		set.add("Pam");
+
+	}
+}

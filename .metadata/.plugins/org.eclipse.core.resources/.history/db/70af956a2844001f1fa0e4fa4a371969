@@ -1,0 +1,15 @@
+package lambdaexpressions.chatgpt;
+
+import java.util.List;
+
+public class OrderMain {
+	public static void main(String[] args) {
+		List<Order> orderList = List.of(
+				new Order(1, "Alice", 75.0),
+			    new Order(2, "Bob", 45.0),
+			    new Order(3, "Charlie", 150.0),
+			    new Order(4, "David", 20.0),
+			    new Order(5, "Eve", 100.0)
+				);
+	}
+}

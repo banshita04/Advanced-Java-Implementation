@@ -1,0 +1,13 @@
+package lambdaexpressions;
+
+import java.util.function.BiFunction;
+
+public class SumOfAllPrimes {
+	public static void main(String[] args) {
+		BiFunction<Integer, Integer, Integer> sumOfAllPrimes
+		= (lower, upper) ->
+		{
+
+		};
+	}
+}

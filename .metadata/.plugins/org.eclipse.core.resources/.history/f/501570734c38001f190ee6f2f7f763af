@@ -1,0 +1,20 @@
+package com.exceptionhandling;
+
+public class UserDefinedException {
+ public static void main(String[] args) {
+	
+}
+ 
+ public class ZeroException extends Exception{
+	 
+ }
+ 
+ public void doSomething() throws ZeroException {
+	 String str = "Zero";
+	 if(str.equals("Zero")) {
+		 throw new ZeroException();
+	 }
+ }
+}
+
+

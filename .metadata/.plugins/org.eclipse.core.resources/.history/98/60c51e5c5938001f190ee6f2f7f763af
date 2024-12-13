@@ -1,0 +1,37 @@
+package com.autoboxingunboxing;
+
+import java.util.ArrayList;
+
+class IntWrapper{
+	public int num;
+
+	public IntWrapper() {
+	}
+
+	public int getNum() {
+		return num;
+	}
+
+	public void setNum(int num) {
+		this.num = num;
+	}
+	
+	
+	
+}
+
+public class Main {
+	public static void main(String[] args) {
+		ArrayList<Integer> numberList = new ArrayList<>();
+		numberList.add(33);
+		numberList.add(76);
+		numberList.add(9);
+		System.out.println(numberList);
+		
+		ArrayList<Integer> numList = new ArrayList<>();
+		numList.add(33);
+		numList.add(76);
+		numList.add(9);
+		System.out.println(numList);
+	}
+}

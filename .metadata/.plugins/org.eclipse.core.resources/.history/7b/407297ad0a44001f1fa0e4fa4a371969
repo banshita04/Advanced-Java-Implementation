@@ -1,0 +1,13 @@
+package lambdaexpressions.chatgpt;
+
+import java.util.List;
+import java.util.Map;
+
+public class PersonMain {
+	public static void main(String[] args) {
+		
+	}
+	public static Map<String, Double> getAverageAgeByCity(List<Person> listOfPeople){
+		return null;
+	}
+}

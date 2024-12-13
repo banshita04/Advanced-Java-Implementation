@@ -1,0 +1,17 @@
+package programming;
+
+import java.util.List;
+import java.util.function.BiPredicate;
+
+public class Bi_PredicateFunctionConsumer {
+	public static void main(String[] args) {
+		List<Integer> numbers = List.of(2,3,1,4,7,3,7,9);
+		
+		//BiPredicate
+		BiPredicate<Integer, String> biPredicate = (number,str)->{
+			return number>10 && str.length()>5;
+		};
+		System.out.println(biPredicate.test(15, "BiPredicate"));
+	}
+
+}

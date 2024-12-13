@@ -1,0 +1,5 @@
+package com.enums;
+
+public enum Learning {
+	COREJAVA, COLLECTION,GENERICS, JSP, MULTITHREADING;
+}

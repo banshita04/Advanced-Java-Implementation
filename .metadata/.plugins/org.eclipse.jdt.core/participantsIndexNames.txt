@@ -1,0 +1,13 @@
+INDEX VERSION 1.131
+C:\Users\BANSROY\Documents\training\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2768758264.index
+\10-spring-web-app\src\main\java
+C:\Users\BANSROY\Documents\CAPGEMINI-TRAINING\PRACTICE CODES\training\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1857861227.index
+\10-spring-web-app\src\main\java
+C:\Users\BANSROY\Documents\CAPGEMINI-TRAINING\PRACTICE CODES\training\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2544182408.index
+\JSP scripting element\src\main\java
+C:\Users\BANSROY\Documents\CAPGEMINI-TRAINING\PRACTICE CODES\training\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1397484252.index
+\Hello-JSP\src\main\java
+C:\Users\BANSROY\Documents\training\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2674308033.index
+\11-spring-web-app\src\main\java
+C:\Users\BANSROY\Documents\training\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1857861227.index
+\10-spring-web-app\src\main\java

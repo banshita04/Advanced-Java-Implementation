@@ -1,0 +1,34 @@
+package com.generics;
+class Vehicle{
+	private int id;
+
+	public Vehicle(int id) {
+		super();
+		this.id = id;
+	}
+
+	@Override
+	public String toString() {
+		return "Vehicle [id=" + id + "]";
+	}
+	
+}
+class Car extends Vehicle{
+	private String model;
+
+	public Car(int id, String model) {
+		super(id);
+		this.model = model;
+	}
+
+	@Override
+	public String toString() {
+		return "Car [model=" + model + "]"+super.toString();
+	}
+	
+}
+public class Wildcards {
+	public static void main(String[] args) {
+		
+	}
+}

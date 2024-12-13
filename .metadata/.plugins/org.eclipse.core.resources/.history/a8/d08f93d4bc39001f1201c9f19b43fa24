@@ -1,0 +1,29 @@
+package com.generics;
+
+import java.util.ArrayList;
+import java.util.List;
+
+class Print {
+	public <E> void printDataList(List<E> list) {
+		for (E element : list) {
+			System.out.println(element);
+		}
+	}
+}
+
+public class GenericMethod {
+	public static void main(String[] args) {
+		List<Integer> list = new ArrayList<>();
+		list.add(12);
+		list.add(22);
+		list.add(89);
+		list.add(13);
+		new Print().printDataList(list);
+		List<String> list1 = new ArrayList<>();
+		list1.add("One");
+		list1.add("Two");
+		list1.add("Three");
+		list1.add("Four");
+		new Print().printDataList(list1);
+	}
+}

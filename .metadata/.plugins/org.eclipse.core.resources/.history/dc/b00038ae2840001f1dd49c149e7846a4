@@ -1,0 +1,12 @@
+package programming;
+
+import java.util.stream.LongStream;
+
+public class Parallelizing {
+
+	public static void main(String[] args) {
+		System.out.println(
+		LongStream.range(0, 100000000).sum());
+	}
+
+}

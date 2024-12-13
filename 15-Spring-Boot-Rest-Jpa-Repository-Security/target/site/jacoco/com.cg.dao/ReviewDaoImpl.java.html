@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>ReviewDaoImpl.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Spring-Hibernate-Rest-Api</a> &gt; <a href="index.source.html" class="el_package">com.cg.dao</a> &gt; <span class="el_source">ReviewDaoImpl.java</span></div><h1>ReviewDaoImpl.java</h1><pre class="source lang-java linenums">package com.cg.dao;
+
+import java.util.List;
+
+import org.springframework.stereotype.Component;
+
+import com.cg.exception.ApplicationException;
+import com.cg.model.Movie;
+import com.cg.model.Review;
+
+import jakarta.persistence.EntityManager;
+import jakarta.persistence.PersistenceContext;
+import jakarta.persistence.TypedQuery;
+@Component
+<span class="fc" id="L15">public class ReviewDaoImpl implements ReviewDao {</span>
+	@PersistenceContext
+	public EntityManager em;
+
+	@Override
+	public Review addNewReview(Review r, int movieCode)throws ApplicationException {
+		// TODO Auto-generated method stub
+		//Movie movie = em.find(Movie.class, movieCode);
+		//if(movie!=null) {
+			//System.out.println(&quot;Movie Object is there&quot;);
+<span class="nc" id="L25">		    Movie movie = em.find(Movie.class, movieCode);</span>
+<span class="nc" id="L26">		    r.setMovie(movie);</span>
+		    //em.getTransaction().begin();
+<span class="nc" id="L28">		    em.persist(r);</span>
+		   // em.getTransaction().commit();
+		    //System.out.println(r.getReviewerName());
+<span class="nc" id="L31">		    return r;</span>
+//			r.setMovie(movie);
+//			em.persist(r);
+//			System.out.println(r.getReviewerName());
+//			return r;
+//		}else
+//			throw new ApplicationException(&quot;Invalid movie id&quot;);
+	}
+
+	@Override
+	public Review searchReview(int reviewCode)throws ApplicationException {
+		// TODO Auto-generated method stub
+<span class="nc" id="L43">		Review review = em.find(Review.class, reviewCode);</span>
+<span class="nc bnc" id="L44" title="All 2 branches missed.">		if(review!=null) {</span>
+<span class="nc" id="L45">			return review;</span>
+		}else 
+<span class="nc" id="L47">			throw new ApplicationException(&quot;Invalid review code&quot;);</span>
+	}
+
+	@Override
+	public List&lt;Review&gt; allReviewsById(int movieCode) {
+		// TODO Auto-generated method stub
+<span class="nc" id="L53">		String jpql = &quot;Select r from Review r where r.movie.movieId=:addr&quot;;</span>
+<span class="nc" id="L54">		TypedQuery&lt;Review&gt; q = em.createQuery(jpql,Review.class);</span>
+<span class="nc" id="L55">		q.setParameter(&quot;addr&quot;, movieCode);</span>
+<span class="nc" id="L56">		List&lt;Review&gt; reviewList = q.getResultList();</span>
+<span class="nc" id="L57">		return reviewList;</span>
+	}
+
+	@Override
+	public List&lt;Review&gt; searchByRatings(float rating) {
+		// TODO Auto-generated method stub
+<span class="nc" id="L63">		return null;</span>
+	}
+
+	@Override
+	public List&lt;Review&gt; searchByReviewerName(String name) {
+		// TODO Auto-generated method stub
+<span class="nc" id="L69">		return null;</span>
+	}
+
+	@Override
+	public Review updateReview(Review r, int reviewId) {
+		// TODO Auto-generated method stub
+<span class="nc" id="L75">		return null;</span>
+	}
+
+	@Override
+	public void deleteReview(int reviewId) {
+		// TODO Auto-generated method stub
+
+<span class="nc" id="L82">	}</span>
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

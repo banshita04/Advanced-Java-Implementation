@@ -1,0 +1,11 @@
+package lambdaexpressions;
+
+import java.util.List;
+
+public class AverageLength {
+	public static void main(String[] args) {
+		List<String> stringList = List.of("bob the builder","oswald","noddy","pingu","thomas");
+		
+		stringList.stream().map(str->str.length()).forEach(System.out::println);
+	}
+}

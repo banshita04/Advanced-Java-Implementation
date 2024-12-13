@@ -1,0 +1,27 @@
+package com.set;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+
+public class Hashset {
+	public static void main(String[] args) {
+		Set<String> set = new HashSet<>();
+		set.add("Bob");
+		set.add("Tom");
+		set.add("Zam");
+		set.add("Paul");
+		set.add("Gary");
+		set.add("Pam");
+		
+		List<String> list = new ArrayList<>();
+		list.addAll(set);
+		System.out.println(list);
+		Collections.sort(list);
+		System.out.println("After sorting:\n"+list);
+		System.out.println(Collections.binarySearch(list, "Zam"));
+
+	}
+}

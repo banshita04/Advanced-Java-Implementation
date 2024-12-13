@@ -1,0 +1,17 @@
+package programming;
+
+class Course{
+	private String name;
+	private String category;
+	private int score;
+	private int noOfStudents;
+	
+}
+public class CustomClass {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

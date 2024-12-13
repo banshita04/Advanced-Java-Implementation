@@ -1,0 +1,23 @@
+package com.cg.SpringHibernateRestApi;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.boot.test.mock.mockito.MockBean;
+
+import com.cg.dao.MovieDao;
+import com.cg.service.MovieService;
+
+@SpringBootTest
+public class MovieServiceTest {
+	@Autowired
+	private MovieService movieservice;
+	//to create mock object of MovieDao
+	@MockBean
+	private MovieDao moviedao;
+	@Test
+	public void testAllMovieService() {
+		
+	}
+	
+}

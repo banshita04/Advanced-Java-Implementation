@@ -1,0 +1,47 @@
+package com.comparablecompareto;
+
+import java.util.LinkedList;
+import java.util.List;
+
+class Name implements Comparable{
+	private String name;
+
+	public Name(String name) {
+		super();
+		this.name = name;
+	}
+
+	@Override
+	public String toString() {
+		return name;
+	}
+
+	@Override
+	public int compareTo(Name o) {
+		// TODO Auto-generated method stub
+		if(name.length()==o.name.length()) {
+			return 0;
+		}else if(name.length)
+		return 0;
+	}
+	
+}
+
+public class Main {
+	public static void main(String[] args) {
+		
+		String a = "abc";
+		String b = "xyz";
+		System.out.println(a.compareTo(b));	
+		
+		List names = new LinkedList<>();
+		names.add(new Name("Bob"));
+		names.add(new Name("Tom"));
+		names.add(new Name("John"));
+		names.add(new Name("Karen"));
+		
+		System.out.println(names);
+		names.sort(null);
+		System.out.println("After sorting: "+names);
+	}
+}

@@ -1,0 +1,24 @@
+//package lambdaexpressions;
+//
+//import java.util.List;
+//import java.util.function.Consumer;
+//import java.util.function.Function;
+//
+//public class UppercaseLowercaseMixedcase {
+//	public static void main(String[] args) {
+//		List<String> stringList = List.of("bob the builder","OSWALD","nOddy","pingu","THOMAS");
+//		
+//		Consumer<List<String>> check = strList -> {
+//			int upperCheck = 0, lowerCheck = 0;
+//			for (String str : stringList) {
+//				for(int i = 0; i <str.length(); i++) {
+//					char ch = str.charAt(i);
+//					if(ch>='a'&&ch<='z')
+//						
+//				}
+//			}
+//		};
+//		
+//		System.out.println(check.apply(stringList));
+//	}
+//}

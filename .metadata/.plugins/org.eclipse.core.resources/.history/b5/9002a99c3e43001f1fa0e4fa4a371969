@@ -1,0 +1,17 @@
+package lambdaexpressions;
+
+import java.util.List;
+
+public class MaxMin {
+	public static void main(String[] args) {
+		List<Integer> integerList = List.of(2,31,4,12,3,46,1,45,8);
+		
+		int min = integerList.stream().min((a,b)->a>b?1:-1).get();
+		
+		int max = integerList.stream().max((a,b)->a<b?1:-1).get();
+		
+		System.out.println("Max: "+max);
+		System.out.println("Min: "+min);
+	}
+
+}

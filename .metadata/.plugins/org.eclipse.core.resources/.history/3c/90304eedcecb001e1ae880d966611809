@@ -1,0 +1,10 @@
+package com.jpa.first;
+
+public class Employee {
+	private int empId;
+	private String empName;
+	private Department department;
+	
+	
+
+}

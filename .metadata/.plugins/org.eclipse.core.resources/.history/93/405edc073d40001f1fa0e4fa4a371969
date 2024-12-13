@@ -1,0 +1,12 @@
+package lambdaexpressions;
+
+import java.util.function.Consumer;
+
+public class LowerUpperCase {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Consumer<String> lowerCase = str->str.toLowerCase();
+	}
+
+}

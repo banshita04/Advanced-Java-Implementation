@@ -1,0 +1,23 @@
+package com.generics;
+
+class Data {
+	private Object object;
+
+	public Data() {
+		this.object = object;
+	}
+
+	@Override
+	public String toString() {
+		return (String) object;
+	}
+	
+	
+	
+}
+
+public class Main{
+	public static void main(String[] args) {
+		
+	}
+}

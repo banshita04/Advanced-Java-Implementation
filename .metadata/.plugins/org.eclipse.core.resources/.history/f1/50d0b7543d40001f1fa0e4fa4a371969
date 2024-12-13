@@ -1,0 +1,19 @@
+package lambdaexpressions;
+
+import java.util.function.Consumer;
+
+public class LowerUpperCase {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Consumer<String> lowerCase = str->str.toLowerCase();
+		
+		Consumer<String> upperCase = str->str.toUpperCase();
+		
+		String str = "Banshita";
+		lowerCase.accept(str);
+		upperCase.accept(str);
+//		System.out.println("String in lower case: ".append(lowerCase.accept(str)));
+	}
+
+}

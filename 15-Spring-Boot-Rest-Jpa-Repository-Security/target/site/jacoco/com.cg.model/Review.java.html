@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Review.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Spring-Hibernate-Rest-Api</a> &gt; <a href="index.source.html" class="el_package">com.cg.model</a> &gt; <span class="el_source">Review.java</span></div><h1>Review.java</h1><pre class="source lang-java linenums">package com.cg.model;
+
+import jakarta.persistence.CascadeType;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
+
+@Entity
+<span class="fc" id="L12">public class Review {</span>
+	@Id @GeneratedValue
+	private int reviewId;
+	@Column(length = 20)
+	private String reviewerName;
+	@Column(length = 200)
+	private String review;
+	
+	private float rating;
+	
+	@ManyToOne(cascade = CascadeType.REMOVE)
+	@JoinColumn(name=&quot;movieId&quot;)
+	private Movie movie;
+	
+	
+	
+	public Movie getMovie() {
+<span class="nc" id="L29">		return movie;</span>
+	}
+	public void setMovie(Movie movie) {
+<span class="nc" id="L32">		this.movie = movie;</span>
+<span class="nc" id="L33">	}</span>
+	public int getReviewId() {
+<span class="nc" id="L35">		return reviewId;</span>
+	}
+	public void setReviewId(int reviewId) {
+<span class="nc" id="L38">		this.reviewId = reviewId;</span>
+<span class="nc" id="L39">	}</span>
+	public String getReviewerName() {
+<span class="nc" id="L41">		return reviewerName;</span>
+	}
+	public void setReviewerName(String reviewerName) {
+<span class="nc" id="L44">		this.reviewerName = reviewerName;</span>
+<span class="nc" id="L45">	}</span>
+	public String getReview() {
+<span class="nc" id="L47">		return review;</span>
+	}
+	public void setReview(String review) {
+<span class="nc" id="L50">		this.review = review;</span>
+<span class="nc" id="L51">	}</span>
+	public float getRating() {
+<span class="nc" id="L53">		return rating;</span>
+	}
+	public void setRating(float rating) {
+<span class="nc" id="L56">		this.rating = rating;</span>
+<span class="nc" id="L57">	}</span>
+	
+	
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

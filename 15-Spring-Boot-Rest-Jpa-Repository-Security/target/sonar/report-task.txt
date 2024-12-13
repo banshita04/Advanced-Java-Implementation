@@ -1,0 +1,6 @@
+projectKey=com.cg:12-Spring-Hibernate-Rest-Api
+serverUrl=http://localhost:9009
+serverVersion=9.6.1.59531
+dashboardUrl=http://localhost:9009/dashboard?id=com.cg%3A12-Spring-Hibernate-Rest-Api
+ceTaskId=AY50-hrCUY6PGM4uRrb_
+ceTaskUrl=http://localhost:9009/api/ce/task?id=AY50-hrCUY6PGM4uRrb_

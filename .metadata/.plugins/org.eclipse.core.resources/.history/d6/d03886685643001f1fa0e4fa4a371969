@@ -1,0 +1,17 @@
+package lambdaexpressions;
+
+import java.util.List;
+import java.util.stream.Collectors;
+
+public class SpecificWord {
+	public static void main(String[] args) {
+		List<String> stringList = List.of("bob the builder","oswald","noddy","pingu","thomas");
+		
+		String specificString = "bold";
+		
+		stringList
+		.stream()
+		.filter(s->s.contains(specificString))
+		.forEach(System.out.append("Found: ")::println);
+	}
+}

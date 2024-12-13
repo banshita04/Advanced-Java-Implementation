@@ -1,0 +1,10 @@
+package com.generics;
+
+public class TypeOfParameters {
+/* T - Type
+ * E - Element
+ * K - Key
+ * N - Number
+ * V - Value
+ * */
+}

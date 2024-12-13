@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;13-Spring-Hibernate-Rest-Api2&apos; to &apos;13-Spring-Hibernate-Rest-Jpa-Repository&apos;" description="Rename resource &apos;13-Spring-Hibernate-Rest-Api2&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/13-Spring-Hibernate-Rest-Api2" name="13-Spring-Hibernate-Rest-Jpa-Repository" stamp="1709267398463" updateReferences="true"/>
+</session>

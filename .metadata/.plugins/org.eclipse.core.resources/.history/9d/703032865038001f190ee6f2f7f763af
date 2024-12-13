@@ -1,0 +1,9 @@
+package com.enums;
+
+public enum Learning {
+	public static final int COREJAVA = 1;
+	public static final int COLLECTION = 2;
+	public static final int GENERICS = 3;
+	public static final int JSP = 4;
+	public static final int MULTITHREADING = 5;
+}

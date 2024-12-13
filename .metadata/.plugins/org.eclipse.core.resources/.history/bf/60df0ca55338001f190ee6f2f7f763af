@@ -1,0 +1,11 @@
+package com.array.callbyreference;
+
+public class Main {
+ public static void main(String[] args) {
+	String names[] = {"Bob", "Cam", "Pam", "Dan"};
+	System.out.println(names);
+}
+ public void displayNames() {
+	 
+ }
+}

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>MyController.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Spring-Hibernate-Rest-Api</a> &gt; <a href="index.source.html" class="el_package">com.cg.secure.controller</a> &gt; <span class="el_source">MyController.java</span></div><h1>MyController.java</h1><pre class="source lang-java linenums">package com.cg.secure.controller;
+
+import java.security.Principal;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.cg.secure.model.User;
+import com.cg.secure.repository.UserRepository;
+
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
+
+
+@RestController
+@CrossOrigin//to connect apps from other domains ..... Eg, React will run another server
+@SecurityRequirement(name=&quot;Bearer Authentication&quot;)
+
+<span class="fc" id="L24">public class MyController {</span>
+	@Autowired
+	private UserRepository userRepo;
+	@GetMapping(&quot;/&quot;)
+	public String home() {
+<span class="nc" id="L29">		return &quot;&lt;h1&gt; Home Page&lt;/h1&gt;&quot;;</span>
+	}
+	@GetMapping(&quot;/user&quot;)
+	public String user() {
+<span class="nc" id="L33">		return &quot;&lt;h1&gt; User Page&lt;/h1&gt;&quot;;</span>
+	}
+	@GetMapping( value = &quot;/admin&quot;,produces = {&quot;application/json&quot;,&quot;application/xml&quot;})
+	@PreAuthorize(&quot;hasAuthority('admin')&quot;)
+	public String admin() {
+<span class="nc" id="L38">		return &quot;&lt;h1&gt; Admin Page&lt;/h1&gt;&quot;;</span>
+	}
+
+	@PutMapping(&quot;/update&quot;)
+	@PreAuthorize(&quot;hasAuthority('admin')&quot;)
+//	@PreAuthorize(&quot;hasAnyRole('admin','user')&quot;)
+	public String update(Principal p) {
+
+<span class="nc" id="L46">		User user=userRepo.findByUsername(p.getName());</span>
+
+<span class="nc" id="L48">		return &quot;&lt;h1&gt; Update Page &quot;+p.getName()+ &quot; and user id is &quot;+ user.getId()+&quot; &lt;/h1&gt;&quot;;</span>
+	}
+	@GetMapping(&quot;/user1&quot;)
+	@PreAuthorize(&quot;hasAuthority('user')&quot;)
+	public String user1(Principal p) {
+<span class="nc" id="L53">		User user=userRepo.findByUsername(p.getName());</span>
+<span class="nc" id="L54">		return &quot;&lt;h1&gt; User1ex Page &quot;+p.getName()+&quot; and user id is &quot;+ user.getId()+&quot; &lt;/h1&gt;&quot;;</span>
+	}
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

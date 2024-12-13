@@ -1,0 +1,69 @@
+package programming;
+
+import java.util.List;
+
+class Course{
+	private String name;
+	private String category;
+	private int score;
+	private int noOfStudents;
+	public Course(String name, String category, int score, int noOfStudents) {
+		super();
+		this.name = name;
+		this.category = category;
+		this.score = score;
+		this.noOfStudents = noOfStudents;
+	}	
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public String getCategory() {
+		return category;
+	}
+	public void setCategory(String category) {
+		this.category = category;
+	}
+	public int getScore() {
+		return score;
+	}
+	public void setScore(int score) {
+		this.score = score;
+	}
+	public int getNoOfStudents() {
+		return noOfStudents;
+	}
+	public void setNoOfStudents(int noOfStudents) {
+		this.noOfStudents = noOfStudents;
+	}
+	@Override
+	public String toString() {
+		return name + ":" + noOfStudents + ":" + score;
+	}
+
+}
+public class CustomClass {
+
+	@SuppressWarnings("unused")
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		List<Course> courses = 
+				List.of(
+						new Course("Spring", "Framework", 98, 20000),
+						new Course("Spring Boot", "Framework", 95, 30000),
+						new Course("API", "Microservices", 97, 10000),
+						new Course("Microservices", "Microservices", 92, 23000),
+						new Course("Full Stack", "Full Stack", 99, 20600),
+						new Course("AWS", "Cloud", 95, 29000),
+						new Course("Azure", "Cloud", 91, 21000),
+						new Course("Docker", "Cloud", 97, 40000),
+						new Course("Kubernetes", "Cloud", 95, 10000)
+						);
+
+
+
+	}
+
+}

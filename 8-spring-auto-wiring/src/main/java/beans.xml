@@ -1,0 +1,23 @@
+<!-- <?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
+ctrl+shift front slash will comment
+auto wiring dont need to add wiring(property ref line)
+byname= bean id and setter method names should match 
+ by type = no need to match with same name as setter should be same type in sub and base class
+
+wiring happens with setter always 
+
+can use annotation in setter insteaad of autowire in XML
+TO USE ANNOTAION in setter, use the below code in XML
+
+<bean id="service" class="com.cg.beans.AccountServiceImpl" autowire="byType"><property name="dao" ref="Savings"/>
+<bean id="service" class="com.cg.beans.AccountServiceImpl"></bean>
+<bean name="savings" class="com.cg.beans.SavingsAccDaoImpl"></bean>
+<bean id="dao" class="com.cg.beans.SavingsAccDaoImpl"></bean>
+<context:annotation-config/>
+</beans>
+ -->

@@ -1,0 +1,14 @@
+package lambdaexpressions;
+
+import java.util.List;
+
+public class LongestAndSmallestString {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		List<String> stringList = List.of("bob the builder","oswald","noddy","pingu","thomas");
+		
+		int maxString = stringList.stream().filter(str->str.length()).mapToInt(Integer::valueOf).max(Integer::compare);
+	}
+
+}

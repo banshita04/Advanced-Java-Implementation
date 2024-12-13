@@ -1,0 +1,29 @@
+package lambdaexpressions.chatgpt;
+
+import java.util.List;
+import java.util.stream.Collectors;
+
+public class TransactionMain {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		List<Transaction> transactionList = List.of(new Transaction(10, "credit", 10000),
+				new Transaction(11, "debit", 4000),
+				new Transaction(12, "credit", 1000),
+				new Transaction(13, "debit", 5000),
+				new Transaction(14, "debit", 1000));
+		
+		
+		
+	}
+	public static List<Integer> getTransactionIds(List<Transaction> transactions){
+		
+		return transactions
+		.stream()
+		.filter(t-> t.getTransactionType().equals("debit"))
+		.sorted((t1,t2)->t1.getTransactionAmount()>t2.getTransactionAmount()?t1.getTransactionId():t2.getTransactionId())
+		.mapToInt(Integer::valueOf)
+		.collect(Collectors.toList());
+	}
+
+}

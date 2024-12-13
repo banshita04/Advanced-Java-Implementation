@@ -1,0 +1,16 @@
+package lambdaexpressions;
+
+import java.util.List;
+import java.util.function.Function;
+
+public class UppercaseLowercaseMixedcase {
+	public static void main(String[] args) {
+		List<String> stringList = List.of("bob the builder","OSWALD","nOddy","pingu","THOMAS");
+		
+		Function<List<String>, String> check = strList -> {
+			return stringList.get(0);
+		};
+		
+		System.out.println(check.apply(stringList));
+	}
+}

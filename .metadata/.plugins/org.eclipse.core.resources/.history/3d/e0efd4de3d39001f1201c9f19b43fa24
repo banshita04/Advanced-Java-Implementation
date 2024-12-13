@@ -1,0 +1,27 @@
+package com.generics;
+
+import java.util.LinkedList;
+import java.util.List;
+
+class Data {
+	private Object object;
+
+	public Data(Object object) {
+		this.object = object;
+	}
+
+	@Override
+	public String toString() {
+		return (String) object;
+	}
+	
+	
+	
+}
+
+public class Main{
+	public static void main(String[] args) {
+		List<Data> list = new LinkedList<>();
+		list.add(new Data("Bob"));
+	}
+}

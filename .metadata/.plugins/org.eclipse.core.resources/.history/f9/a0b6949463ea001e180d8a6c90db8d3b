@@ -1,0 +1,52 @@
+package com.cg.SpringHibernateRestApi;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+import java.util.List;
+
+import org.assertj.core.util.Arrays;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.boot.test.mock.mockito.MockBean;
+
+import com.cg.dao.MovieDao;
+import com.cg.model.Movie;
+import com.cg.service.MovieService;
+
+//to make a test class
+@SpringBootTest
+public class MovieServiceTest {
+	@Autowired
+	private MovieService movieservice;
+	
+	//to create mock object of MovieDao
+	@MockBean
+	private MovieDao moviedao;
+	
+	static List<Movie> mockMovies;
+	
+	@BeforeAll
+	public void initMockMovies() {
+		Movie movie1 = new Movie(1,"Inception", "SciFi","Eng");
+		Movie movie2 = new Movie(2,"Harry Potter", "Fantasy","Eng");
+		Movie movie3 = new Movie(3,"Jurassic World", "SciFi","Eng");
+		Movie movie4 = new Movie(4,"Fast and Furious", "Action","Eng");
+		Movie movie5 = new Movie(5,"John Wick", "Action","Eng");
+		
+		mockMovies=Arrays.asList(movie1,movie2,movie3,movie4,movie5);
+
+	}
+	
+	//to make testcases
+	@Test
+	public void testAllMovieService() {
+		when(moviedao.findAll()).thenReturn(mockMovies);
+		List<Movie> movies = movieservice.allmoviesService();
+		assertEquals(movies.size(), mockMovies.size());
+	}
+
+	
+	
+}

@@ -1,0 +1,15 @@
+package com.generics;
+
+import java.util.List;
+
+class Data {
+	public <E> void printDataList(List<E> list) {
+		
+	}
+}
+
+public class GenericMethod {
+	public static void main(String[] args) {
+		
+	}
+}

@@ -1,0 +1,71 @@
+package com.jpa.first;
+
+import java.util.List;
+
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
+import javax.persistence.TypedQuery;
+
+
+public class CustomerMain {
+	
+	EntityManagerFactory emf=
+			Persistence.createEntityManagerFactory("customerPU");//reads persistence.xml file
+	public static void main(String[] args) {
+		
+		CustomerMain main=new CustomerMain();
+		System.out.println("Hi , just observe the table creation");
+//		main.addNewCustomer();
+//		main.searchCustomerById(103);
+		main.readAllCustomers();
+//		main.searchCustomerByCity("Bangalore");
+	}
+	
+	void searchCustomerById(int cid) {
+		EntityManager em = emf.createEntityManager();
+		//internally find() do select query
+		Customer c = em.find(Customer.class, cid);
+		if(c!=null) {
+			System.out.println(c.getCustId()+" "+c.getCustName()+" "+c.getAddress());
+		}else {
+			System.out.println("Customer not found");
+		}
+	}
+	
+	void searchCustomerByCity(String city) {
+		EntityManager em = emf.createEntityManager();
+		String jpql = "select c from Customer c where c.address = :addr";
+		TypedQuery<Customer> q = em.createQuery(jpql, Customer.class);
+		q.setParameter("addr", city);
+		System.out.println("-----Customer from------ "+city);
+		List<Customer> clist = q.getResultList();
+		clist.forEach(c->System.out.println(c.getCustId()+" "+c.getCustName()+" "+c.getAddress()));
+	}
+	
+	void readAllCustomers() {
+		EntityManager em = emf.createEntityManager();
+		String jpql = "select c from Customer c";
+		TypedQuery<Customer> q = em.createQuery(jpql, Customer.class);
+		List<Customer> clist = q.getResultList();
+		clist.forEach(c->System.out.println(c.getCustId()+" "+c.getCustName()+" "+c.getAddress()));
+	}
+	
+	void addNewCustomer() {
+		Customer c=new Customer();
+		c.setCustId(103);
+		c.setCustName("Surbhi");
+		c.setAddress("Kerala");
+		
+		EntityManager em=emf.createEntityManager();
+		
+		em.getTransaction().begin(); //starts the transaction
+		em.persist(c); //saves in the Database.....
+		em.getTransaction().commit(); //commit the transaction
+		
+		System.out.println("Added :) ");
+		
+	}
+
+}
+

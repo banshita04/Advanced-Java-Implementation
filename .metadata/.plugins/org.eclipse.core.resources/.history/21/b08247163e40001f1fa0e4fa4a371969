@@ -1,0 +1,24 @@
+package lambdaexpressions;
+
+import java.util.List;
+import java.util.function.Function;
+
+public class LowerUpperCase {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Function<String, String> lowerCase = str->str.toLowerCase();
+		
+		Function<String, String> upperCase = str->str.toUpperCase();
+		
+		String str = "Banshita";
+		
+		System.out.println("String in lower case: "+lowerCase.apply(str));
+		System.out.println("String in upper case: "+upperCase.apply(str));
+		
+		List<String> list = List.of("hello","world","Mars","Pluto","Hey","straWBerry");
+		
+		System.out.println(list.stream().map(string->string.toLowerCase()));
+	}
+
+}

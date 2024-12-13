@@ -1,0 +1,10 @@
+package lambdaexpressions;
+
+public class IsStringEmpty {
+
+	public static void main(String[] args) {
+		
+		
+	}
+
+}

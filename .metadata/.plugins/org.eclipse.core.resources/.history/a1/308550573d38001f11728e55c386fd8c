@@ -1,0 +1,14 @@
+package com.anonymous.innerclass;
+
+public class Main {
+	public static void main(String[] args) {
+		
+	}
+}
+
+abstract class Lock{
+	public abstract boolean isUnlocked(String key);
+	public void test() {
+		System.out.println("Test");
+	}
+}

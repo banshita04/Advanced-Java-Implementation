@@ -1,0 +1,21 @@
+1720512666939	Rename local variable 'sum2'
+1720516313669	Extract local variable 'isEvenPredicate'
+1720516336264	Extract local variable 'squareFunction'
+1720516361522	Extract local variable 'sysoutConsumer'
+1720517103778	Extract local variable 'sumAccumulator'
+1720519424965	Extract local variable 'evenPredicate'
+1720519437860	Extract local variable 'oddPredicate'
+1720519496718	Extract method 'filterAndPrint'
+1720519571999	Inline local variable 'evenPredicate'
+1720519580751	Inline local variable 'oddPredicate'
+1720522171091	Extract local variable 'mappingFunction'
+1720522243999	Extract method 'mapAndCreateNewList'
+1720522269614	Inline local variable 'mappingFunction'
+1720523580172	Copy compilation unit
+1720671526057	Delete element
+1720672836217	Extract local variable 'reviewScoreGreaterThan95Predicate'
+1720676530209	Extract local variable 'sortingByNoOfStudentsIncreasing'
+1720767082965	Extract method 'createPredicateWithCutOffReviewScore'
+1720767119275	Inline local variable 'cutOffReviewScore'
+1720773673747	Rename resource 'file'
+1720773810042	Move file

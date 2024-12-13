@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="MavenCheckoutLocationPage">
+		<list key="scmUrl">
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="MavenProjectWizardLocationPage">
+		<list key="location">
+			<item value="C:\Users\BANSROY\Documents\training\11-spring-web-app"/>
+			<item value="C:\Users\BANSROY\Documents\training\6-greeting-bean"/>
+			<item value="C:\Users\BANSROY\Documents\training\5_Inheritance_Mapping"/>
+			<item value="C:\Users\BANSROY\Documents\training\4_jpa_ManyToOne_Birectional"/>
+			<item value="C:\Users\BANSROY\Documents\training\3-jpa-maven-project"/>
+			<item value="C:\Users\BANSROY\Documents\training\2_JPA_ManyToOne"/>
+			<item value="C:\Users\BANSROY\Documents\training\CoreJava"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="MavenProjectWizardArchetypePage">
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="Maven2ProjectWizardArchifactPage">
+		<list key="package">
+		</list>
+		<list key="groupId">
+		</list>
+		<list key="artifactId">
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+		<list key="version">
+			<item value="0.0.1-SNAPSHOT"/>
+		</list>
+	</section>
+	<section name="MavenProjectWizardArtifactPage">
+		<list key="groupId">
+			<item value="com.cg.beans"/>
+			<item value="com.cg"/>
+			<item value="com.cg.entity"/>
+		</list>
+		<list key="name">
+		</list>
+		<list key="artifactId">
+			<item value="10_spring_component_annotaion"/>
+			<item value="7-spring-wiring"/>
+			<item value="6-greeting-bean"/>
+			<item value="5_Inheritance_Mapping"/>
+			<item value="4_jpa_ManyToToOne_Birectional"/>
+			<item value="3-jpa-maven-project"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+		<list key="version">
+			<item value="0.0.1-SNAPSHOT"/>
+		</list>
+	</section>
+	<section name="org.eclipse.m2e.core.pom.overview">
+	</section>
+	<section name="org.eclipse.m2e.core.pom.dependencies">
+	</section>
+	<section name="MavenProjectImportWizardPage">
+		<list key="rootDirectory">
+			<item value="C:\Users\BANSROY\Downloads\SpringModelProject-master"/>
+			<item value="C:\Users\BANSROY\Downloads\spring-master"/>
+			<item value="C:\Users\BANSROY\Downloads\Spring-Hibernate-Rest-Api"/>
+			<item value="C:\Users\BANSROY\Downloads\11_spring_boot_restAPI\11_spring_boot_restAPI"/>
+			<item value="C:\Users\BANSROY\Downloads\11_spring_boot_restAPI"/>
+			<item value="&quot;C:\Users\BANSROY\Downloads\11_spring_boot_restAPI\&quot;"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+</section>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>JwtUserDetailsService.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Spring-Hibernate-Rest-Api</a> &gt; <a href="index.source.html" class="el_package">com.cg.secure.service</a> &gt; <span class="el_source">JwtUserDetailsService.java</span></div><h1>JwtUserDetailsService.java</h1><pre class="source lang-java linenums">package com.cg.secure.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.stereotype.Service;
+
+import com.cg.secure.model.User;
+import com.cg.secure.model.UserDto;
+import com.cg.secure.repository.UserRepository;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
+@Service
+<span class="fc" id="L20">public class JwtUserDetailsService implements UserDetailsService {</span>
+	@Autowired
+	private UserRepository userDao;
+
+	@Autowired
+	private PasswordEncoder bcryptEncoder;
+
+	private String roles;
+	
+	@Override
+	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+<span class="nc" id="L31">		List&lt;SimpleGrantedAuthority&gt; roles = null;</span>
+<span class="nc" id="L32">		User user = userDao.findByUsername(username);</span>
+<span class="nc" id="L33">		System.out.println(user);</span>
+<span class="nc bnc" id="L34" title="All 2 branches missed.">		if (user == null) {</span>
+<span class="nc" id="L35">			throw new UsernameNotFoundException(&quot;User not found with username: &quot; + username);</span>
+		}
+<span class="nc" id="L37">		roles = Arrays.asList(new SimpleGrantedAuthority(user.getRole()));</span>
+<span class="nc" id="L38">		System.out.println(&quot;Roles : &quot;+roles);</span>
+<span class="nc" id="L39">		setRoles(roles.toString());</span>
+<span class="nc" id="L40">		return new org.springframework.security.core.userdetails.User(user.getUsername(), user.getPassword(),</span>
+				roles);
+		//return new org.springframework.security.core.userdetails.User(user.getUsername(), user.getPassword(),
+			//	new ArrayList&lt;&gt;());
+	}
+	
+
+	public String getRoles() {
+<span class="nc" id="L48">		return roles;</span>
+	}
+
+
+	public void setRoles(String roles) {
+<span class="nc" id="L53">		this.roles = roles;</span>
+<span class="nc" id="L54">	}</span>
+
+
+	public User save(UserDto user) {
+<span class="nc" id="L58">		User newUser = new User();</span>
+<span class="nc" id="L59">		newUser.setUsername(user.getUsername());</span>
+<span class="nc" id="L60">		newUser.setPassword(bcryptEncoder.encode(user.getPassword()));</span>
+<span class="nc" id="L61">		newUser.setRole(user.getRole());</span>
+<span class="nc" id="L62">		return userDao.save(newUser);</span>
+	}
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

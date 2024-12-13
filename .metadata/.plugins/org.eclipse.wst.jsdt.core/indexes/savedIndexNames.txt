@@ -1,0 +1,10 @@
+INDEX VERSION 1.4+C:\Users\BANSROY\Documents\CAPGEMINI-TRAINING\PRACTICE CODES\training\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+2020969264.index
+2473076844.index
+2912936876.index
+1221269829.index
+2371280403.index
+3924725540.index
+2147131683.index
+1078150927.index
+1074342090.index
